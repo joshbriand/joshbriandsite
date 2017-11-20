@@ -1,0 +1,155 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col-half {
+	width: 4.16%
+}
+
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.67%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.67%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.67%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.67%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	font-family: Helvetica;
+	background-image: url(../img/trees.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+#slogan {
+	height: 81vh;
+	display: table;
+	position: absolute;
+}
+
+#actualSlogan {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 12vh;
+	font-family: Brush Script MT;
+	text-shadow: 2px 2px black;
+}
+
+#header {
+	height: 8vh;
+	display: table;
+	border-bottom: 1px;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-style: solid;
+	border-color: black;
+}
+
+#contactLink, #merchLink, #webDevLink {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background: rgba(255,255,255,.75);
+}
+
+#joshbriand, #navSpacer {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	font-family: Brush Script MT;
+	font-size: 3.75vh;
+	padding-left: 10px;
+	background: rgba(255,255,255,.75);
+}
+
+#slideTitles {
+	display: table;
+}
+
+#content {
+	text-align: center;
+	font-size: 3vh;
+	background: rgba(255,255,255,.75);
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+#spacer {
+	height: 8vh;
+}
+
+#webDevContent, #merchContent, #contactContent {
+	display: none;
+	position: relative;
+	height: 81vh;
+}
+
+#webDev, #merch, #contact {
+	display: none;
+	height: 8vh;
+	vertical-align: middle;
+	text-align: center;
+	background: rgba(255,255,255,.75);
+}
+
+h2 {
+	font-size: 4vh;
+}
