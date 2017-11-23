@@ -17,11 +17,26 @@ $('#navSpacer').click(function(){
 $('#webDevLink').click(function(){
 	if (downSection === 'webDev') {
 		up(downContent, downLink);
+		$('#slogan').css('display', 'table');
 		$('#actualSlogan').fadeIn(1200);
 	} else if (downSection !== '') {
 		downContent.slideUp('slow', function(){
 			up(downContent, downLink);
-			$('#actualSlogan').fadeOut(400);
+			$('#actualSlogan').fadeOut(400, function() {
+				$('#slogan').css('display', 'none');
+				$('#webDevContent').slideDown('slow');
+				$('#webDevContent').css('display','flex');
+				$('#webDevLink').css('text-decoration', 'underline');
+				$('#merchLink').css('color', 'rgba(0,0,0,.15)');
+				$('#contactLink').css('color', 'rgba(0,0,0,.15)');
+				downContent = $('#webDevContent');
+				downLink = $('#webDevLink');
+				downSection = 'webDev';
+			});
+		});
+	} else {
+		$('#actualSlogan').fadeOut(400, function(){
+			$('#slogan').css('display', 'none');
 			$('#webDevContent').slideDown('slow');
 			$('#webDevContent').css('display','flex');
 			$('#webDevLink').css('text-decoration', 'underline');
@@ -31,16 +46,6 @@ $('#webDevLink').click(function(){
 			downLink = $('#webDevLink');
 			downSection = 'webDev';
 		});
-	} else {
-		$('#actualSlogan').fadeOut(400);
-		$('#webDevContent').slideDown('slow');
-		$('#webDevContent').css('display','flex');
-		$('#webDevLink').css('text-decoration', 'underline');
-		$('#merchLink').css('color', 'rgba(0,0,0,.15)');
-		$('#contactLink').css('color', 'rgba(0,0,0,.15)');
-		downContent = $('#webDevContent');
-		downLink = $('#webDevLink');
-		downSection = 'webDev';
 	};
 });
 
@@ -48,11 +53,25 @@ $('#webDevLink').click(function(){
 $('#merchLink').click(function(){
 	if (downSection === 'merch') {
 		up(downContent, downLink);
+		$('#slogan').css('display', 'table');
 		$('#actualSlogan').fadeIn(1200);
 	} else if (downSection !== '') {
 		downContent.slideUp('slow', function(){
 			up(downContent, downLink);
-			$('#actualSlogan').fadeOut(400);
+			$('#actualSlogan').fadeOut(400, function(){
+				$('#slogan').css('display', 'none');
+				$('#merchContent').slideDown('slow');
+				$('#merchContent').css('display','flex');
+				$('#merchLink').css('text-decoration', 'underline');
+				$('#webDevLink').css('color', 'rgba(0,0,0,.15)');
+				$('#contactLink').css('color', 'rgba(0,0,0,.15)');
+				downContent = $('#merchContent');
+				downLink = $('#merchLink');
+				downSection = 'merch';
+			});
+		});
+	} else {
+		$('#actualSlogan').fadeOut(400, function(){
 			$('#merchContent').slideDown('slow');
 			$('#merchContent').css('display','flex');
 			$('#merchLink').css('text-decoration', 'underline');
@@ -62,16 +81,6 @@ $('#merchLink').click(function(){
 			downLink = $('#merchLink');
 			downSection = 'merch';
 		});
-	} else {
-		$('#actualSlogan').fadeOut(400);
-		$('#merchContent').slideDown('slow');
-		$('#merchContent').css('display','flex');
-		$('#merchLink').css('text-decoration', 'underline');
-		$('#webDevLink').css('color', 'rgba(0,0,0,.15)');
-		$('#contactLink').css('color', 'rgba(0,0,0,.15)');
-		downContent = $('#merchContent');
-		downLink = $('#merchLink');
-		downSection = 'merch';
 	};
 });
 
@@ -79,11 +88,26 @@ $('#merchLink').click(function(){
 $('#contactLink').click(function(){
 	if (downSection === 'contact') {
 		up(downContent, downLink);
+		$('#slogan').css('display', 'table');
 		$('#actualSlogan').fadeIn(1200);
 	} else if (downSection !== '') {
 		downContent.slideUp('slow', function(){
 			up(downContent, downLink);
-			$('#actualSlogan').fadeOut(400);
+			$('#actualSlogan').fadeOut(400, function() {
+				$('#slogan').css('display', 'none');
+				$('#contactContent').slideDown('slow');
+				$('#contactContent').css('display','flex');
+				$('#contactLink').css('text-decoration', 'underline');
+				$('#webDevLink').css('color', 'rgba(0,0,0,.15)');
+				$('#merchLink').css('color', 'rgba(0,0,0,.15)');
+				downContent = $('#contactContent');
+				downLink = $('#contactLink');
+				downSection = 'contact';
+			});
+		});
+	} else {
+		$('#actualSlogan').fadeOut(400, function() {
+			$('#slogan').css('display', 'none');
 			$('#contactContent').slideDown('slow');
 			$('#contactContent').css('display','flex');
 			$('#contactLink').css('text-decoration', 'underline');
@@ -93,16 +117,6 @@ $('#contactLink').click(function(){
 			downLink = $('#contactLink');
 			downSection = 'contact';
 		});
-	} else {
-		$('#actualSlogan').fadeOut(400);
-		$('#contactContent').slideDown('slow');
-		$('#contactContent').css('display','flex');
-		$('#contactLink').css('text-decoration', 'underline');
-		$('#webDevLink').css('color', 'rgba(0,0,0,.15)');
-		$('#merchLink').css('color', 'rgba(0,0,0,.15)');
-		downContent = $('#contactContent');
-		downLink = $('#contactLink');
-		downSection = 'contact';
 	};
 });
 
